@@ -1,0 +1,78 @@
+.Recommend{
+    ion-row{
+        ion-col{
+            ion-card{
+                ion-card-header{
+                    ion-card-title{
+                        font-size: 22px;
+                        font-display: block;
+                        font-weight: bold;
+                        color: #000;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+                ion-card-content{
+                    ion-text,p{
+                        font-size: 22px;
+                        font-display: block;
+                        font-weight: normal;
+                        color:white;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+.main{
+    display: flex;
+    justify-content: space-around;
+}
+.more{
+    
+}
+.Recommend{
+    ion-row{
+        ion-card-content{
+            ion-text,p{
+                font-size: 42px;
+                text-decoration: solid;
+                font-display: block;
+                font-weight: normal;
+                color:white;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        ion-button{
+            size: 150px;
+            font-display: block;
+            font-weight: bold;
+            color:white;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
+.card_info{
+    display: flex;
+}
+.right_info{
+    ion-card-header{
+        size: 50px;
+    }
+}
+.Wealth{
+    ion-card-content{
+        ion-text,p{
+            font-size: 22px;
+            font-display: block;
+            font-weight: normal;
+            color:white;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

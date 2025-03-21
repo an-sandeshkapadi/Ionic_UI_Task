@@ -1,0 +1,123 @@
+// ion-text{
+//     font-size: 8px;
+//     font-weight: bold;
+//     color: #000;
+//     margin: 0;
+//     padding: 0;
+// }
+ion-text{
+    font-size: 1.5rem;
+    font-display: block;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+ion-grid{
+   
+    ion-row{
+        ion-col{
+            ion-text{
+                font-size: 10px;
+                font-display: block;
+                font-weight: bold;
+                color: #000;
+                margin: 0;
+                padding: 0;
+            }
+        }
+       
+    }
+}
+
+.card12{
+   
+    ion-row{
+        ion-col{
+            ion-card{
+                ion-card-header{
+                    ion-button{
+                        
+                        color: rgb(236, 243, 243);
+                        text-emphasis-color: white;
+                        }
+                }
+                ion-card-content{
+                    ion-text{
+                        
+                        font-size: 22px;
+                        font-display: block;
+                        font-weight: normal;
+                        color: red;
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+       
+    }
+}
+.Title{
+    ion-row{
+        ion-col{
+            ion-button{
+                align-items: center;
+                margin-left: 20%;
+            }
+            p{
+                font-size: 22px;
+                font-display: block;
+                font-weight: bold;
+                color: #000;
+                margin-left: 20%;
+                padding: 0;
+            }
+        }
+    }
+}
+.Current{
+    ion-row{
+        ion-col{
+            ion-card{
+                ion-text{
+                    font-size: 22px;
+                    font-display: block;
+                    font-weight: bold;
+                    
+                    color: red;
+                    margin-left: 20%;
+                    padding: 0;
+                }
+                ion-card-header{
+                    
+                        ion-text{
+                            font-size: 22px;
+                            font-display: block;
+                            font-weight: bold;
+                            color: #000;
+                            margin: 0;
+                            padding: 0;
+                        }
+                    
+                }
+                ion-card-content{
+                    ion-text{
+                        
+                        font-size: 20px;
+                        font-display: block;
+                        font-weight: normal;
+                        color: rgb(145, 145, 135);
+                        margin: 0;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+       
+    }
+}
+.Finanical_img{
+//     transform: translate(-50%, -50%);
+//     position: absolute;
+}
