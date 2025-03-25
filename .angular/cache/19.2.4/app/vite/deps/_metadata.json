@@ -1,0 +1,148 @@
+{
+  "hash": "b6b5268a",
+  "configHash": "504e9e33",
+  "lockfileHash": "a1ad7ac5",
+  "browserHash": "6b303995",
+  "optimized": {
+    "@angular/common": {
+      "src": "../../../../../../node_modules/@angular/common/fesm2022/common.mjs",
+      "file": "@angular_common.js",
+      "fileHash": "1e08cfe9",
+      "needsInterop": false
+    },
+    "@angular/core": {
+      "src": "../../../../../../node_modules/@angular/core/fesm2022/core.mjs",
+      "file": "@angular_core.js",
+      "fileHash": "b96aecc0",
+      "needsInterop": false
+    },
+    "@angular/platform-browser": {
+      "src": "../../../../../../node_modules/@angular/platform-browser/fesm2022/platform-browser.mjs",
+      "file": "@angular_platform-browser.js",
+      "fileHash": "ba59579a",
+      "needsInterop": false
+    },
+    "@angular/router": {
+      "src": "../../../../../../node_modules/@angular/router/fesm2022/router.mjs",
+      "file": "@angular_router.js",
+      "fileHash": "67fe796b",
+      "needsInterop": false
+    },
+    "@ionic/angular/standalone": {
+      "src": "../../../../../../node_modules/@ionic/angular/fesm2022/ionic-angular-standalone.mjs",
+      "file": "@ionic_angular_standalone.js",
+      "fileHash": "0b5fb05e",
+      "needsInterop": false
+    },
+    "ionicons": {
+      "src": "../../../../../../node_modules/ionicons/dist/index.js",
+      "file": "ionicons.js",
+      "fileHash": "0ae4d18f",
+      "needsInterop": false
+    },
+    "ionicons/icons": {
+      "src": "../../../../../../node_modules/ionicons/icons/index.mjs",
+      "file": "ionicons_icons.js",
+      "fileHash": "ef196251",
+      "needsInterop": false
+    },
+    "swiper/element/bundle": {
+      "src": "../../../../../../node_modules/swiper/swiper-element-bundle.mjs",
+      "file": "swiper_element_bundle.js",
+      "fileHash": "2df9405f",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "status-tap-7SIUZCQA": {
+      "file": "status-tap-7SIUZCQA.js"
+    },
+    "input-shims-BEKMR3B6": {
+      "file": "input-shims-BEKMR3B6.js"
+    },
+    "focus-visible-LKFGWR5D": {
+      "file": "focus-visible-LKFGWR5D.js"
+    },
+    "shadow-css-SEE3HE2J": {
+      "file": "shadow-css-SEE3HE2J.js"
+    },
+    "ios.transition-KBZTFQNA": {
+      "file": "ios__transition-KBZTFQNA.js"
+    },
+    "md.transition-5YLUFGKL": {
+      "file": "md__transition-5YLUFGKL.js"
+    },
+    "index3-MTR3P7WQ": {
+      "file": "index3-MTR3P7WQ.js"
+    },
+    "hardware-back-button-6L27PRA7": {
+      "file": "hardware-back-button-6L27PRA7.js"
+    },
+    "swipe-back-HYAQTWDK": {
+      "file": "swipe-back-HYAQTWDK.js"
+    },
+    "keyboard2-4YRFYTV6": {
+      "file": "keyboard2-4YRFYTV6.js"
+    },
+    "index9-DP7ZF6AJ": {
+      "file": "index9-DP7ZF6AJ.js"
+    },
+    "chunk-GAXEVTUY": {
+      "file": "chunk-GAXEVTUY.js"
+    },
+    "chunk-7Q5HCUSL": {
+      "file": "chunk-7Q5HCUSL.js"
+    },
+    "chunk-HGFWUX63": {
+      "file": "chunk-HGFWUX63.js"
+    },
+    "chunk-QAYQX25C": {
+      "file": "chunk-QAYQX25C.js"
+    },
+    "chunk-6NAVHQIE": {
+      "file": "chunk-6NAVHQIE.js"
+    },
+    "chunk-VYK365E2": {
+      "file": "chunk-VYK365E2.js"
+    },
+    "chunk-VWFR5YFJ": {
+      "file": "chunk-VWFR5YFJ.js"
+    },
+    "chunk-T653PBGC": {
+      "file": "chunk-T653PBGC.js"
+    },
+    "chunk-EUT5B6DW": {
+      "file": "chunk-EUT5B6DW.js"
+    },
+    "chunk-4AF7KAXZ": {
+      "file": "chunk-4AF7KAXZ.js"
+    },
+    "chunk-T7NLFTSM": {
+      "file": "chunk-T7NLFTSM.js"
+    },
+    "chunk-S73DE2HG": {
+      "file": "chunk-S73DE2HG.js"
+    },
+    "chunk-WG6K4H5K": {
+      "file": "chunk-WG6K4H5K.js"
+    },
+    "chunk-ACUVEYEP": {
+      "file": "chunk-ACUVEYEP.js"
+    },
+    "chunk-Y7NPOQSI": {
+      "file": "chunk-Y7NPOQSI.js"
+    },
+    "chunk-FPXX35PY": {
+      "file": "chunk-FPXX35PY.js"
+    },
+    "chunk-6GLT6377": {
+      "file": "chunk-6GLT6377.js"
+    },
+    "chunk-SURSPF2X": {
+      "file": "chunk-SURSPF2X.js"
+    },
+    "chunk-QHQP2P2Z": {
+      "file": "chunk-QHQP2P2Z.js"
+    }
+  }
+}

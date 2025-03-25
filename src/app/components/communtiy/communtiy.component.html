@@ -140,8 +140,7 @@
   <ion-grid class="Wealth">
     <ion-row>
       <ion-col size="6">
-        <ion-card style="height:150px;background: linear-gradient(45deg, #F0F8FF, #6d73c2, #4e3bf8);
-">
+        <ion-card style="height:150px;background: linear-gradient(45deg, #F0F8FF, #6d73c2, #4e3bf8);">
         
           <ion-card-content style="text-align: center; margin-top: 50px; ">
             <ion-text>
@@ -164,5 +163,48 @@
     </ion-row>
   </ion-grid>
   
-
+  <!-- <swiper [config]="slideOpts">
+    <ng-template swiperSlide *ngFor="let card of cards">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>{{ card.title }}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{ card.content }}
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
+  </swiper> -->
+  <swiper-container slides-per-view="1.5" space-between="10">
+    <swiper-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Card 1</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Card 1 Content
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Card 2</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Card 1 Content
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+    <swiper-slide>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Card 3</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Card 1 Content
+        </ion-card-content>
+      </ion-card>
+    </swiper-slide>
+  </swiper-container>
 </ion-content>
