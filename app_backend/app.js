@@ -6,6 +6,9 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
+// use cors for api requests
+const cors = require('cors');
+app.use(cors());
 
 // Welcome route
 app.get('/', (req, res) => {

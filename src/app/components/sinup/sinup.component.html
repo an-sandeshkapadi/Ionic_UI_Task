@@ -1,36 +1,62 @@
 <ion-content>
   <ion-header>
     <ion-toolbar>
-      <ion-title>
-        Sinup
-      </ion-title>
+      <ion-title>Signup</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Sign Up</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="email"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Password</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="floating">Confirm Password</ion-label>
-        <ion-input type="password"></ion-input>
-      </ion-item>
-      <ion-button expand="block">Sign Up</ion-button>
-    </ion-card-content>
-    <ion-item>
-      <ion-label>
-        Already have an account? <a routerLink="/signin">Sign In</a>
+  <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Sign Up</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
 
-      </ion-label>
-    </ion-item>
-  </ion-card>
+        <!-- Name Field -->
+        <ion-item>
+          <ion-label position="floating">Full Name</ion-label>
+          <ion-input type="text" formControlName="name"></ion-input>
+        </ion-item>
+        <p *ngIf="signupForm.get('name')?.invalid && signupForm.get('name')?.touched" class="error">
+          Name is required (min 3 characters)
+        </p>
+
+        <!-- Email Field -->
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+        <p *ngIf="signupForm.get('email')?.invalid && signupForm.get('email')?.touched" class="error">
+          Valid email is required
+        </p>
+
+        <!-- Password Field -->
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" formControlName="password"></ion-input>
+        </ion-item>
+        <p *ngIf="signupForm.get('password')?.invalid && signupForm.get('password')?.touched" class="error">
+          Password must be at least 6 characters
+        </p>
+
+        <!-- Confirm Password Field -->
+        <ion-item>
+          <ion-label position="floating">Confirm Password</ion-label>
+          <ion-input type="password" formControlName="confirmPassword"></ion-input>
+        </ion-item>
+        <p *ngIf="signupForm.get('confirmPassword')?.invalid && signupForm.get('confirmPassword')?.touched" class="error">
+          Confirm password is required
+        </p>
+
+        <ion-button expand="block" type="submit" [disabled]="signupForm.invalid">Sign Up</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </form>
+
+  <ion-item>
+    <ion-label>
+      Already have an account? <a routerLink="/signin">Sign In</a>
+    </ion-label>
+  </ion-item>
 </ion-content>
+
