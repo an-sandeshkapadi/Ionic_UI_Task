@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>booking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  
+  
+  <ion-content>
+    <ion-segment value="Pending" [(ngModel)]="selectedSegment" (ionChange)="segmentChanged($event)" >
+      <ion-segment-button value="Pending" >
+        <ion-label>Pending</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Confirmed">
+        <ion-label>Confirmed</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Completed">
+        <ion-label>Completed</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="Cancelled">
+        <ion-label>Cancelled</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    
+    @for(booking of filteredData; track booking.bookingId){
+      <ion-card >
+        <ion-item>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="4" >
+                    <img [src]="booking.imagePath" style="object-fit: cover;" alt="Service Image" class="booking-image" height="100%" width="100%">
+              </ion-col>           
+              <ion-col size="8">
+                <ion-label><strong>Customer Name:</strong> {{ booking.customerName }}</ion-label>
+                <ion-label><strong>Service Name:</strong> {{ booking.serviceName }}</ion-label>
+                <ion-label><strong>Date:</strong> {{ booking.date | date }}</ion-label>
+                <ion-label><strong>Time:</strong> {{ booking.time }}</ion-label>
+                <ion-label><strong>Status:</strong> {{ booking.status }}</ion-label>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          </ion-item>
+          @if ( booking.status === 'Pending' || booking.status === 'Confirmed') {
+            <div class="button-container" >
+              <ion-button color="light" class="cancel" (click)="cancelBooking(booking.bookingId)">Cancel Booking</ion-button>
+              <ion-button color="warning" class="reschedule" (click)="rescheduleBooking(booking.bookingId)">Reschedule</ion-button>
+            </div>
+          }
+          @if(booking.status==='Completed'){
+            <div class="button-container" >
+              <ion-button color="light" class="rate" (click)="viewReceipt(booking.bookingId)">View Receipt</ion-button>
+            </div>
+
+          }
+      </ion-card>
+    
+    }
+ 
+
+
+  
+
+  </ion-content>

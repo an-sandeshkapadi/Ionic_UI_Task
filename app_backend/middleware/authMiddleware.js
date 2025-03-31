@@ -1,9 +1,10 @@
 
 const jwt = require('jsonwebtoken');
 
-const SECRET_KEY = "punenexus123"; // Secret Key
+const SECRET_KEY = "punenexus123"; 
 
 module.exports = (req, res, next) => {
+  console.log("ok fine===")
   const authHeader = req.header('Authorization');
 
   if (!authHeader) {
@@ -11,14 +12,14 @@ module.exports = (req, res, next) => {
     return res.status(403).json({ message: 'Access denied. No token provided.' });
   }
 
-  // Extract token from "Bearer <TOKEN>"
   const token = authHeader.startsWith("Bearer ") ? authHeader.split(" ")[1] : authHeader;
-  console.log(token); // 🔥 Log token for debugging
+  console.log(token);
   try {
     const decoded = jwt.verify(token, SECRET_KEY);
-    console.log("Decoded Token Data:", decoded); // 🔥 Log token data for debugging
+    console.log("Decoded Token Data:", decoded); // Log token data for debugging
 
-    req.user = decoded; // Attach user data to request
+    req.user = decoded;
+     // Attach user data to request
     next();
   } catch (error) {
     console.log("Token Verification Failed:", error.message);

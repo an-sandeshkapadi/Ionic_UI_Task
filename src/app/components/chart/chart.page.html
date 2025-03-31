@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Chart Example</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-item>
+    <ion-label>Select Range</ion-label>
+    <ion-select [(ngModel)]="selectedRange" (ionChange)="updateChart()">
+      <ion-select-option value="week">Week</ion-select-option>
+      <ion-select-option value="month">Month</ion-select-option>
+      <ion-select-option value="year">Year</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <div class="chart-container">
+    <canvas #chartCanvas></canvas>
+  </div>
+</ion-content>

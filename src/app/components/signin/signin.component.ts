@@ -5,6 +5,7 @@ import { RouterLink } from '@angular/router';
 import { IonContent, IonInput, IonCard, IonCardTitle, IonCardHeader, IonCardContent, IonItem, IonLabel, IonButton } from "@ionic/angular/standalone";
 import { Router } from '@angular/router';
 import { ApicallService } from 'src/app/Api/apicall.service';
+import { catchError, of, Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-signin',
@@ -17,6 +18,7 @@ import { ApicallService } from 'src/app/Api/apicall.service';
 export class SigninComponent  implements OnInit {
 
   signinForm: FormGroup;
+ $destroy = new Subject<void>();
 
   constructor(private fb: FormBuilder, 
     private ApiService: ApicallService,
@@ -35,30 +37,29 @@ export class SigninComponent  implements OnInit {
   
   }
   userLogin(user:any){
-    
-      this.ApiService.login(user).subscribe(
-        (response) => {
-          console.log('Login Successful:', response);
-          // Store token (optional)
-          localStorage.setItem('token', response.token);
-          // Redirect to user profile
-          this.UserProfile();
-        },
-        (error) => {
-          console.error('Error:', error);
-          alert('Invalid email or password');
-        }
-      );
-    
+    this.ApiService.login(user).pipe(
+      takeUntil(this.$destroy),
+      catchError((err) => {
+        return of(null);
+      })
+    ).subscribe({
+      next: (data) => {
+        console.log(data);
+        localStorage.setItem('token', data.token);
+        this.router.navigate(['/user-dashboard']); 
+      },
+      error: (err) => {
+        console.error('Error in subscription:', err);  // Fallback error handler
+      },
+      complete: () => {
+        console.log('Observable completed');
+      }
+    });
   }
-  UserProfile(){
-    const token= localStorage.getItem('token');
-    if(token){
-      this.router.navigate(['/user']);
 
-      console.log(token);
-    }
-  }
-  ngOnInit() {}
+  ngOnInit() {
+    
+      // localStorage.removeItem('token');
+      }
 
 }

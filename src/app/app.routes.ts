@@ -4,7 +4,7 @@ import { CommuntiyComponent } from './components/communtiy/communtiy.component';
 import { SinupComponent } from './components/sinup/sinup.component';
 import { SigninComponent } from './components/signin/signin.component';
 import { UserProfileComponent } from './components/user-profile/user-profile.component';
-import { authGuard } from './guard/auth.guard';
+import { authGuard } from '../auth/auth.guard';
 
 export const routes: Routes = [
   {
@@ -13,7 +13,14 @@ export const routes: Routes = [
   },
   {
     path:'financial',
-    component: FinanicalComponent
+    component: FinanicalComponent,
+    canActivate:[authGuard]
+
+  },
+  {
+    path:'user',
+    component:UserProfileComponent,
+    canActivate:[authGuard]
   },
   {
     path:'community',
@@ -46,14 +53,28 @@ export const routes: Routes = [
             
           ]
         },
-        {
-          path:'user',
-          component:UserProfileComponent,
-          canActivate:[authGuard]
-        },
+
         {
           path: '',
           redirectTo: 'signin',
           pathMatch: 'full',
         },
+  {
+    path: 'user-dashboard',
+    loadComponent: () => import('./components/user-dashboard/user-dashboard.page').then( m => m.UserDashboardPage),
+    canActivate:[authGuard]
+
+  },
+  {
+    path: 'chart',
+    loadComponent: () => import('./components/chart/chart.page').then( m => m.ChartPage)
+  },
+  {
+    path: 'user-info',
+    loadComponent: () => import('./components/user-info/user-info.page').then( m => m.UserInfoPage)
+  },
+  {
+    path: 'booking',
+    loadComponent: () => import('./components/Booking/booking/booking.page').then( m => m.BookingPage)
+  },
       ];

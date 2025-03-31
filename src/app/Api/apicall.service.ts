@@ -6,13 +6,16 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ApicallService {
-  private apiUrl ="http://localhost:3000/api/users/";
+  private apiUrl ="http://localhost:3000/api/users";
   constructor(private http: HttpClient) {}
 
   newUser(data: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, data);
+    return this.http.post<any>(this.apiUrl+'/', data);
   }
   login(data: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl + 'login', data);
+    return this.http.post<any>(this.apiUrl + '/login', data);
+  }
+  logout(): Observable<any> {
+    return this.http.get<any>(this.apiUrl + '/logout');
   }
 }
