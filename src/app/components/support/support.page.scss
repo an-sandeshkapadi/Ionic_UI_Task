@@ -1,0 +1,71 @@
+ion-textarea{
+    height: 150px !important;
+    width: 100%;
+    // border-radius: 1px !important;
+    border: none !important;
+    padding: 10px !important;
+    font-size: 16px !important;
+    outline: none !important;
+    resize: none !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+form {
+  // width: 100%;
+  // max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  ion-item {
+    --background: transparent;
+    --border-radius: 8px;
+    --padding-start: 10px;
+    --inner-padding-end: 10px;
+    margin-bottom: 15px;
+  }
+
+  ion-label {
+    font-weight: 600;
+    color: #333;
+  }
+
+  ion-input, ion-textarea {
+    // --background: #f8f9fa;
+    // --border-radius: 5px;
+    // --padding-start: 10px;
+    // border: 1px solid #ddd;
+  }
+
+  ion-textarea {
+    min-height: 100px;
+  }
+
+  ion-button {
+    font-size: 16px;
+    font-weight: bold;
+  //   --border-radius: 8px;
+  //   --box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  // }
+}
+
+   
+  
+  .help-support-container {
+  .tab-header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+
+.accordion-content {
+  padding: 10px;
+  font-size: 14px;
+  color: #555;
+}
+}

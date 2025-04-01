@@ -1,6 +1,6 @@
 .button-container {
     display: flex;
-    gap: 15%;
+    // gap: 30%;
     margin-top: 1%;
 
     ion-button {
@@ -8,13 +8,6 @@
       padding: 5px 10px;
       border-radius: 5px;
 
-      &.cancel {
-        
-        color: white;
-      }
-
-      &.reschedule {
-        color: white;
-      }
+      
     }
 }

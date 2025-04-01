@@ -44,15 +44,17 @@
           </ion-item>
           @if ( booking.status === 'Pending' || booking.status === 'Confirmed') {
             <div class="button-container" >
-              <ion-button color="light" class="cancel" (click)="cancelBooking(booking.bookingId)">Cancel Booking</ion-button>
-              <ion-button color="warning" class="reschedule" (click)="rescheduleBooking(booking.bookingId)">Reschedule</ion-button>
+              <ion-toolbar>
+              <ion-button slot="start" shape="round" color="light" class="cancel" (click)="cancelBooking(booking.bookingId)">Cancel Booking</ion-button>
+              <ion-button slot="end" shape="round" color="warning" class="reschedule" (click)="rescheduleBooking(booking.bookingId)">Reschedule</ion-button>
+              </ion-toolbar>
             </div>
           }
           @if(booking.status==='Completed'){
             <div class="button-container" >
               <ion-button color="light" class="rate" (click)="viewReceipt(booking.bookingId)">View Receipt</ion-button>
             </div>
-
+        
           }
       </ion-card>
     
