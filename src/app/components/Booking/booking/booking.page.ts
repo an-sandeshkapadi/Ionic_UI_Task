@@ -113,24 +113,8 @@ export class BookingPage implements OnInit {
         status: 'Confirmed',
         imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKwu24bi0nBtgdzIKRC-Xl-TOoaE3ML5sSAQ&s'
       },
-      {
-        bookingId: 'BKG12346',
-        customerName: 'Neha Verma',
-        serviceName: 'Facial',
-        date: new Date(2025, 2, 28),
-        time: '11:00 AM',
-        status: 'Pending',
-        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Kwu24bi0nBtgdzIKRC-Xl-TOoaE3ML5sSAQ&s'
-      },
-      {
-        bookingId: 'BKG12347',
-        customerName: 'Rahul Gupta',
-        serviceName: 'Beard Trim',
-        date: new Date(2025, 2, 28),
-        time: '11:30 AM',
-        status: 'Completed',
-        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Kwu24bi0nBtgdzIKRC-Xl-TOoaE3ML5sSAQ&s'
-      },
+   
+     
       {
         bookingId: 'BKG12348',
         customerName: 'Priya Singh',
@@ -147,17 +131,9 @@ export class BookingPage implements OnInit {
         date: new Date(2025, 2, 28),
         time: '12:30 PM',
         status: 'Cancelled',
-        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7Kwu24bi0nBtgdzIKRC-Xl-TOoaE3ML5sSAQ&s'
+        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTNjkaQHLXfokbl1GiKnXl6v7GNgnG8rb3JA&s'
       },
-      {
-        bookingId: 'BKG12350',
-        customerName: 'Meera Nair',
-        serviceName: 'Pedicure',
-        date: new Date(2025, 2, 28),
-        time: '1:00 PM',
-        status: 'Pending',
-        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_Kwu24bi0nBtgdzIKRC-Xl-TOoaE3ML5sSAQ&s'
-      },
+      
       {
         bookingId: 'BKG12351',
         customerName: 'Arjun Kapoor',
@@ -174,7 +150,7 @@ export class BookingPage implements OnInit {
         date: new Date(2025, 2, 28),
         time: '2:00 PM',
         status: 'Completed',
-        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY-YaakulOk0RiitAAirkb7HcvtDi3-3WZXA&s'
+        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTNjkaQHLXfokbl1GiKnXl6v7GNgnG8rb3JA&s'
       },
       {
         bookingId: 'BKG12353',
@@ -183,26 +159,10 @@ export class BookingPage implements OnInit {
         date: new Date(2025, 2, 28),
         time: '2:30 PM',
         status: 'Cancelled',
-        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY-YaakulOk0RiitAAirkb7HcvtDi3-3WZXA&s'
+        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTNjkaQHLXfokbl1GiKnXl6v7GNgnG8rb3JA&s'
       },
-      {
-        bookingId: 'BKG12354',
-        customerName: 'Anjali Mehta',
-        serviceName: 'Facial',
-        date: new Date(2025, 2, 28),
-        time: '3:00 PM',
-        status: 'Confirmed',
-        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY-YaakulOk0RiitAAirkb7HcvtDi3-3WZXA&s'
-      },
-      {
-        bookingId: 'BKG12355',
-        customerName: 'Rajesh Yadav',
-        serviceName: 'Hair Spa',
-        date: new Date(2025, 2, 28),
-        time: '3:30 PM',
-        status: 'Pending',
-        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY-YaakulOk0RiitAAirkb7HcvtDi3-3WZXA&s'
-      },
+     
+      
       {
         bookingId: 'BKG12356',
         customerName: 'Sita Raman',
@@ -210,7 +170,7 @@ export class BookingPage implements OnInit {
         date: new Date(2025, 2, 28),
         time: '4:00 PM',
         status: 'Completed',
-        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY-YaakulOk0RiitAAirkb7HcvtDi3-3WZXA&s'
+        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcG7bjaEFwSdVs4KvkIleUaasOjgFKrf7z6g&s'
       },
       {
         bookingId: 'BKG12357',
@@ -230,15 +190,7 @@ export class BookingPage implements OnInit {
         status: 'Cancelled',
         imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMh3TSq7RzA1ioI7Sj-43Sen_tDnhnftN7Lg&s'
       },
-      {
-        bookingId: 'BKG12359',
-        customerName: 'Rohit Malhotra',
-        serviceName: 'Beard Trim',
-        date: new Date(2025, 2, 28),
-        time: '5:30 PM',
-        status: 'Completed',
-        imagePath: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjfGgKzY_YCVcMjtuwnnfKZ1WcCJ5-Eg6uUg&s'
-      },
+     
       {
         bookingId: 'BKG12360',
         customerName: 'Simran Kaur',

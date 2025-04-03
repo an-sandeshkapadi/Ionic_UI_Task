@@ -17,6 +17,9 @@ app.get('/', (req, res) => {
 
 // User routes
 app.use('/api/users', userRoutes);
+sequelize.authenticate()
+  .then(() => console.log('Connected to MariaDB successfully!'))
+  .catch(err => console.error('Unable to connect to MariaDB:', err));
 
 // Start the server
 app.listen(PORT, () => {

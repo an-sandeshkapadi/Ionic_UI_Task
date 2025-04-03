@@ -1,0 +1,92 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Help & support</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-segment value="help" [(ngModel)]="selectedSegment" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="help">
+      <ion-label>Help</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="support">
+      <ion-label>Support</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  @if(selectedSegment === 'help'){
+        <ion-accordion-group>
+          <ion-accordion value="cancelBooking">
+            <ion-item slot="header">
+              <ion-label><strong>How to cancel Appointment Booking</strong></ion-label>
+            </ion-item>
+            <div class="accordion-content" slot="content">
+              It has survived not only five centuries, but also the leap into electronic typesetting, 
+              remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets.
+            </div>
+          </ion-accordion>
+    
+          <ion-accordion value="addReview">
+            <ion-item slot="header">
+              <ion-label><strong>to add review?</strong> </ion-label>
+            </ion-item>
+            <div class="accordion-content" slot="content">
+              You can add a review by navigating to the salon's page and clicking the "Write a Review" button.
+            </div>
+          </ion-accordion>
+    
+          <ion-accordion value="savedSalon">
+            <ion-item slot="header">
+              <ion-label><strong> How to see Saved Salon?</strong> </ion-label>
+            </ion-item>
+            <div class="accordion-content" slot="content">
+              You can see your saved salons under the "Favorites" section in your profile.
+            </div>
+          </ion-accordion>
+    
+          <ion-accordion value="findSalon">
+            <ion-item slot="header">
+              <ion-label><strong> How to find Salon?</strong> </ion-label>
+            </ion-item>
+            <div class="accordion-content" slot="content">
+              Use the search bar to find salons based on your location or services provided.
+            </div>
+          </ion-accordion>
+    
+          <ion-accordion value="bookAppointment">
+            <ion-item slot="header">
+              <ion-label><strong> How to Book Appointment?</strong> </ion-label>
+            </ion-item>
+            <div class="accordion-content" slot="content">
+              Select a salon, choose a service, and pick an available time slot to book an appointment.
+            </div>
+          </ion-accordion>
+        </ion-accordion-group>
+      
+    
+
+     
+  }
+  @if(selectedSegment ==='support'){
+   
+    <div class="">
+    <form  (ngSubmit)="supportData()">
+      <ion-item>
+        <!-- <ion-label position="floating">Name</ion-label> -->
+        <ion-input fill=outline and shape=round type="text"name="name" placeholder="Enter Your Name" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <!-- <ion-label position="floating">Email</ion-label> -->
+        <ion-input fill=outline and shape=round type="email" name="email" placeholder="Enter Your Email" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <!-- <ion-label position="floating">Message</ion-label> -->
+        <ion-textarea fill=outline and shape=round name="message" placeholder="Massage" required></ion-textarea>
+      </ion-item>
+
+      <ion-button fill=outline and shape=round  expand="block" color="warning" type="submit">Submit</ion-button>
+    </form>
+  </div>
+}
+</ion-content>
